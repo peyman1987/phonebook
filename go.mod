@@ -1,6 +1,6 @@
 module github.com/peyman1987/phonebook
 
-// @version v1.0.0-SNAPSHOT
+// @version v1.0.0
 
 go 1.21.0
 
