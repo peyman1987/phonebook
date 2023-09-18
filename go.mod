@@ -1,5 +1,7 @@
 module github.com/peyman1987/phonebook
 
+// @version v1.0.0-SNAPSHOT
+
 go 1.21.0
 
 require (
@@ -22,6 +24,6 @@ require (
 	github.com/mitchellh/mapstructure v1.5.0 // indirect
 	github.com/mitchellh/reflectwalk v1.0.2 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
-	go.uber.org/multierr v1.10.0 // indirect
+	go.uber.org/multierr v1.11.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
