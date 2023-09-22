@@ -1,0 +1,32 @@
+settings:
+  maxHistory: 10
+  timeout: 6000
+
+namespaces:
+  phone-book:
+    labels:
+      managed-by: helmsman
+
+helmRepos:
+  bitnami: https://charts.bitnami.com/bitnami
+
+apps:
+  postgresql:
+    name: postgresql
+    namespace: phone-book
+    chart: "bitnami/postgresql"
+    enabled: true
+    version: "12.7.1"
+    secretsFiles:
+      - ./postgresql/secrets.yaml
+    valuesFiles:
+      - ./postgresql/values.yaml
+
+  phone-book:
+    name: phone-book
+    namespace: phone-book
+    chart: "./phone-book"
+    enabled: true
+    version: "0.1.0"
+    secretsFiles:
+      - ./phone-book/secrets.yaml
